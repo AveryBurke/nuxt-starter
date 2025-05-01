@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { ref, onMounted } from 'vue'
 import { useAuth } from '../composibles/useAuth'
 
@@ -19,15 +19,15 @@ onMounted(() => {
   }, 100)
 })
 
-definePageMeta({
-  layout: "default",
-});
-</script>
+// definePageMeta({
+//   layout: "default",
+// });
+</script> -->
 
 <template>
-  <div class="home-container">
+  <!-- <div class="home-container">
     <p v-show="loading">Redirecting to user profile...</p>
-  </div>
+  </div> -->
 </template>
 
 <style scoped>

@@ -18,8 +18,8 @@ const headers = {
 
 export default async (event: HandlerEvent, context: ExtendedHandlerContext) => {
     const userID = context.params?.userID
-
-    return { statusCode: 200, headers, body: JSON.stringify({ userID }) }
+    console.log({ userID })
+    return { statusCode: 200, headers, body: userID }
 };
 
 
