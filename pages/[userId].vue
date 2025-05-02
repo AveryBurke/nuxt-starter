@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
   import { ref, computed, onMounted } from 'vue'
   import { useRoute, useRouter } from 'vue-router'
   import { useAuth } from '../composibles/useAuth'
@@ -32,13 +32,13 @@
     }
     
     // Get userId from route
-    const userId = route.params.userId
-    
+    const userId = route.params.userId as string
+    console.log(userId)
     // Fetch user data
     await fetchUserData(userId)
   })
   
-  const fetchUserData = async (userId) => {
+  const fetchUserData = async (userId:string) => {
     loading.value = true
     error.value = null
     
@@ -55,7 +55,6 @@
         role: 'Administrator'
       }
     } catch (err) {
-      error.value = 'Failed to load user data'
       console.error(err)
     } finally {
       loading.value = false

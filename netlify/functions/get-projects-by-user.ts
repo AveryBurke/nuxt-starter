@@ -7,7 +7,7 @@ interface ExtendedHandlerContext extends HandlerContext {
     };
 };
 
-export const handler = async (event: HandlerEvent, context: ExtendedHandlerContext): Promise<Response> => {
+export default async (event: HandlerEvent, context: ExtendedHandlerContext): Promise<Response> => {
     const userID = context.params?.userID
 
     console.log("Function called with userID:", userID);
